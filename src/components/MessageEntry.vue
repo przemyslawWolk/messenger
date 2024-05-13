@@ -13,6 +13,7 @@
 </template>
 
 <script>
+// I implemented just native tooltip, using title attr
 export default {
   props: {
     message: {

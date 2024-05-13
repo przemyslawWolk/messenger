@@ -37,6 +37,7 @@ export default {
     sendReply(message) {
       // sending the message, handling the error and scrolling to bottom
       this.sendMessage(message).catch((error) => {
+        // I'd handle it better, implementing something similar to the error on Messenger, but unfortunately I got out of time.
         alert(error);
       });
       this.scrollToBottom();

@@ -49,8 +49,11 @@ export default {
       };
       commit("ADD_MESSAGE", optimisticMessage);
 
+      // so the Promise comes after instant message injection
       return new Promise((resolve, reject) => {
         setTimeout(() => {
+          // my way is to just generate a random number and check if it's lower than 10%.
+          // If yes, then proceed to the rejection. If not, just resolve.
           const isFailed = Math.random() < 0.1;
           if (isFailed) {
             commit("REMOVE_MESSAGE");
