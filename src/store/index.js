@@ -1,9 +1,6 @@
 import { createStore } from "vuex";
+import messages from "./messages";
 
 export default createStore({
-  state: {},
-  getters: {},
-  mutations: {},
-  actions: {},
-  modules: {},
+  modules: { messages },
 });
